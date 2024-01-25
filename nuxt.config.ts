@@ -1,8 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
   devtools: { enabled: true },
   modules: ["@vite-pwa/nuxt"],
+
+  nitro: {
+    prerender: {
+      routes: ["/rss.xml", "/sitemap.xml", "/"],
+    },
+  },
 
   pwa: {
     manifest: {
