@@ -33,6 +33,13 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: "/",
+      globPatterns: ["**/*.{js,css,html,json,svg,webp}"],
+      runtimeCaching: [
+        {
+          urlPattern: "/",
+          handler: "NetworkFirst",
+        },
+      ],
     },
     devOptions: {
       enabled: true,
