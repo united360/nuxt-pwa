@@ -2,7 +2,7 @@
   <div>
     <NuxtPwaManifest />
 
-    <p>
+    <p v-if="$pwa">
       {{ $pwa.offlineReady }}
     </p>
 
